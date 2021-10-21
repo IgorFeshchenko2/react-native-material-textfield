@@ -81,7 +81,7 @@ export default class TextField extends PureComponent {
       bottom: PropTypes.number,
     }),
 
-    labelOffset: Label.propTypes.offset,
+    labelOffset: Label.propTypes,
 
     labelTextStyle: Text.propTypes,
     titleTextStyle: Text.propTypes,
@@ -103,8 +103,8 @@ export default class TextField extends PureComponent {
     activeLineWidth: PropTypes.number,
     disabledLineWidth: PropTypes.number,
 
-    lineType: Line.propTypes.lineType,
-    disabledLineType: Line.propTypes.lineType,
+    lineType: Line.propTypes,
+    disabledLineType: Line.propTypes,
 
     disabled: PropTypes.bool,
 
