@@ -449,7 +449,7 @@ export default class TextField extends PureComponent {
   }
 
   inputProps() {
-    const {label, labelTextStyle, labelPadding, ...props} = this.props;
+    const {label, labelTextStyle, labelPadding, labelOffset, ...props} = this.props;
    
     return props;
   }
