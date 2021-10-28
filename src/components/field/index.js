@@ -15,6 +15,7 @@ import Affix from '../affix';
 import Helper from '../helper';
 import Counter from '../counter';
 
+import {fieldProps} from "./fieldProps";
 import styles from './styles';
 
 function startAnimation(animation, options, callback) {
@@ -448,10 +449,20 @@ export default class TextField extends PureComponent {
       + contentInset.input;
   }
 
-  inputProps() {
-    const {label, labelTextStyle, labelPadding, labelOffset, ...props} = this.props;
-   
-    return props;
+   inputProps() {
+    let store = {};
+
+    for (let key in fieldProps) {
+      if ('defaultValue' === key) {
+        continue;
+      }
+
+      if (key in this.props) {
+        store[key] = this.props[key];
+      }
+    }
+
+    return store;
   }
 
   inputStyle() {
